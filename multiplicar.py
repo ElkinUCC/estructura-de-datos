@@ -1,4 +1,4 @@
-##Ejercicio con recursividad para multiplicar dos numeros sin usar el operador de multiplicacion
+##recursividad para multiplicar dos numeros sin usar el operador de multiplicacion
 def multiplicar(a, b):
     if a == 0 or b == 0:
         return 0
@@ -6,10 +6,10 @@ def multiplicar(a, b):
         return -multiplicar(a, -b)
     return a + multiplicar(a, b - 1)
 
-print(multiplicar(10, -6))
+print(multiplicar(4, -4))
 
 
-## for
+## con ciclo for
 def multiplicar(a, b):
     if a == 0 or b == 0:
         return 0
@@ -29,7 +29,7 @@ def multiplicar(a, b):
     if negativo:
         return -resultado
     return resultado
-print(multiplicar(10, -9))
+print(multiplicar(4, -9))
 
 ##white
 def multiplicar(a, b):
@@ -39,7 +39,6 @@ def multiplicar(a, b):
     resultado = 0
     negativo = False
 
-    # cambio signo
     if b < 0:
         b = -b
         negativo = not negativo
@@ -54,4 +53,4 @@ def multiplicar(a, b):
     if negativo:
         return -resultado
     return resultado
-print(multiplicar(10, 8))
+print(multiplicar(-8, 8))

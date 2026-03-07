@@ -188,47 +188,9 @@ class ListaTickets:
         print("MEDIA:", media)
         print("BAJA:", baja)
 
-if __name__ == "__main__":
-
-    print("=========== PRUEBA GENERAL COMPLETA ===========\n")
-
-    lista = ListaTickets()
-
-    # 1️⃣ Insertamos tickets en desorden de prioridad
-    lista.agregar_ticket(Ticket(1, "Media 1", Prioridad.MEDIA, "Carlos"))
-    lista.agregar_ticket(Ticket(2, "Alta 1", Prioridad.ALTA, "Ana"))
-    lista.agregar_ticket(Ticket(3, "Baja 1", Prioridad.BAJA, "Luis"))
-    lista.agregar_ticket(Ticket(4, "Alta 2", Prioridad.ALTA, "Pedro"))
-    lista.agregar_ticket(Ticket(5, "Media 2", Prioridad.MEDIA, "Laura"))
-
-    print("→ Recorrido hacia adelante (debe ser ALTA, ALTA, MEDIA, MEDIA, BAJA):")
-    lista.listar_adelante()
-
-    print("\n→ Recorrido hacia atrás:")
-    lista.listar_atras()
-
-    print("\n→ Total actual:", lista._total)
-
-    # 2️⃣ Buscar ticket
-    print("\n→ Buscar ID 3:")
-    encontrado = lista.buscar_ticket(3)
-    print("Encontrado:", encontrado is not None)
-
-    # 3️⃣ Reasignar técnico
-    print("\n→ Reasignar técnico del ID 5:")
-    lista.reasignar(5, "Miguel")
-    print("Nuevo técnico:", lista.buscar_ticket(5).tecnico)
-
-    # 4️⃣ Atender primero (debe eliminar la primera ALTA)
-    print("\n→ Atender primero:")
-    atendido = lista.atender_primero()
-    print("Se atendió:", atendido.id_ticket, "-", atendido.prioridad.name)
-
-    print("\n→ Lista después de atender:")
-    lista.listar_adelante()
-
-    # 5️⃣ Mostrar estadísticas
-    print("\n→ Estadísticas:")
-    lista.estadisticas()
-
-    print("\n=========== FIN PRUEBA ===========")
+print("Ejercicio 3 - Búsqueda binaria")
+print("Recursiva:", busqueda_binaria_recursiva([1, 3, 5, 7, 9], 5)) # type: ignore
+print("Iterativa:", busqueda_binaria_iterativa([1, 3, 5, 7, 9], 5)) # type: ignore
+print("Ejercicio 4 - Fibonacci")
+print("Recursivo:", fibonacci_recursivo(10)) # type: ignore
+print("Iterativo:", fibonacci_iterativo(10)) # type: ignore

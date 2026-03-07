@@ -1,6 +1,5 @@
 ##Log de Conversión — Recursividad, For y While (EJ 01–06)
 
----
 
 #EJ 01 — Factorial
 
@@ -23,7 +22,7 @@ def factorial_for(n):
     return resultado
 
 
-##White
+##while
 
 def factorial_while(n):
     resultado = 1
@@ -52,7 +51,7 @@ def suma_digitos_for(n):
         suma += int(digito)
     return suma
 
-##white
+##while
 
 def suma_digitos_while(n):
     suma = 0
@@ -97,7 +96,7 @@ def busqueda_binaria_for(arr, objetivo):
 
     return -1
 
-##white
+##while
 
 def busqueda_binaria_while(arr, objetivo):
     izq = 0
@@ -176,7 +175,7 @@ def hanoi_for(n):
     for i in range(1, movimientos+1):
         print("Movimiento", i)
 
-##white
+##while
 
 def hanoi_while(n):
     movimientos = (2**n) - 1
@@ -203,7 +202,7 @@ def multiplicar_for(a,b):
         resultado += a
     return resultado
 
-##white
+##while
 
 def multiplicar_while(a,b):
     resultado = 0
